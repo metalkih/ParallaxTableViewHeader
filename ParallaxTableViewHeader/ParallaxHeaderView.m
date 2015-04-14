@@ -72,6 +72,7 @@ static CGFloat kLabelPaddingDist = 8.0f;
         delta = fabs(MIN(0.0f, offset.y));
         rect.origin.y -= delta;
         rect.size.height += delta;
+        rect.size.width = [[UIScreen mainScreen] bounds].size.width;
         self.imageScrollView.frame = rect;
         self.clipsToBounds = NO;
         self.headerTitleLabel.alpha = 1 - (delta) * 1 / kMaxTitleAlphaOffset;
